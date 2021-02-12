@@ -1,0 +1,46 @@
+from selenium import webdriver
+import time
+import unittest
+import methods
+from sampleProjects import search_word:
+class SearchTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        path="c://users/administrator/test/selenium/driver/chromedriver.exe"
+        cls.driver=webdriver.chrome(Path)
+        cls.driver.implicitly.wait(10)
+        cls.driver.maximize_window()
+    try:
+    
+    
+          def test_search_word(self):
+            self.driver.get("https://www.google.com/")
+            self.Search_Word(driver)
+            result=self.Search_Word.search_For_word("ducks")
+            assert result=="ducks"
+     except:
+         print("something went wrong")
+        
+    @classmethod
+    def tearDown(cls):
+        cls.driver.close()
+        cls.driver.quite()
+
+
+
+Class 2 :
+
+import org.openqa.selenium.Keys
+class search_Word():
+    def __init__(self,driver):
+        self.driver=driver
+        self.search_box="/html/body/div[1]/div[3]/form/div[2]/div[1]/div[1]/div/div[2]/input"
+        self.link="//*[@id="rso"]/div[7]/div/div[1]/a/h3/span"
+        self.word="//*[@id="content"]/div[1]/article/div[3]/div[2]/div/div[1]/div[1]/h1"
+        
+    def search_For_Word(word):
+        self.driver.find_element_by_xpath(search_box).send_keys(word)
+        self.driver.send_keys(keys.RETURN)
+        self.driver.find_element_by_xpath(link)
+        element=self.driver.find_element_by_xpath(word).get_attribute("Text")
+        return element
