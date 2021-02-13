@@ -1,3 +1,6 @@
+Question 1:
+Programming language: python
+Class:1
 from selenium import webdriver
 import time
 import unittest
@@ -44,3 +47,22 @@ class search_Word():
         self.driver.find_element_by_xpath(link)
         element=self.driver.find_element_by_xpath(word).get_attribute("Text")
         return element
+  
+Question 2:
+Programming Language:python 
+ 
+import requests
+import json
+class Read_Data:
+    def Test_Data:
+      data = requests.get('https://jsonplaceholder.typicode.com/posts')
+      dict={}
+      if x.status_code!=200:
+        raise Exception(response.get('status'))
+      else:
+        dict = json.loads(x)
+        if dict['userId']==1:
+            print("Data received is not corrupted")
+        else:
+            print("Data is corrupted")
+            
